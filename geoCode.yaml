@@ -1,0 +1,20 @@
+id
+key
+
+curl -G "https://naveropenapi.apigw.ntruss.com/map-geocode/v2/geocode" \
+    --data-urlencode "query=자양로 104" \
+    -H "X-NCP-APIGW-API-KEY-ID: id" \
+    -H "X-NCP-APIGW-API-KEY: key" -v
+
+curl -G "https://naveropenapi.apigw.ntruss.com/map-geocode/v2/geocode" \ --data-urlencode "query=6, Buljeong-ro, Bundang-gu" \ --data-urlencode "coordinate=127.1054328,37.3595963" \ -H "X-NCP-APIGW-API-KEY-ID: myid" \ -H "X-NCP-APIGW-API-KEY: mykey" -v 
+
+Invoke-WebRequest -Uri "https://naveropenapi.apigw.ntruss.com/map-geocode/v2/geocode?query=6, Buljeong-ro, Bundang-gu&coordinate=127.1054328,37.3595963" -Method GET -Headers @{"X-NCP-APIGW-API-KEY-ID"="id"; "X-NCP-APIGW-API-KEY"="key"}
+
+curl -G "https://naveropenapi.apigw.ntruss.com/map-geocode/v2/geocode" --data-urlencode "query=6, Buljeong-ro, Bundang-gu" --data-urlencode "coordinate=127.1054328,37.3595963" -H "X-NCP-APIGW-API-KEY-ID: id" -H "X-NCP-APIGW-API-KEY: key"
+
+curl -G "https://naveropenapi.apigw.ntruss.com/map-geocode/v2/geocode" --data-urlencode "query=6, Buljeong-ro, Bundang-gu" --data-urlencode "coordinate=127.1054328,37.3595963" -H "X-NCP-APIGW-API-KEY-ID: id" -H "X-NCP-APIGW-API-KEY: key" -v
+
+curl -G "https://naveropenapi.apigw.ntruss.com/map-geocode/v2/geocode" \
+    --data-urlencode "query=6, Buljeong-ro, Bundang-gu" \
+    -H "X-NCP-APIGW-API-KEY-ID: id" \
+    -H "X-NCP-APIGW-API-KEY: key" -v

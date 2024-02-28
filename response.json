@@ -1,0 +1,66 @@
+{
+  "status": "OK",
+  "meta": { "totalCount": 1, "page": 1, "count": 1 },
+  "addresses": [
+    {
+      "roadAddress": "서울특별시 광진구 자양로 104",
+      "jibunAddress": "서울특별시 광진구 구의동 246-17",
+      "englishAddress": "104, Jayang-ro, Gwangjin-gu, Seoul, Republic of Korea",
+      "addressElements": [
+        {
+          "types": ["SIDO"],
+          "longName": "서울특별시",
+          "shortName": "서울특별시",
+          "code": ""
+        },
+        {
+          "types": ["SIGUGUN"],
+          "longName": "광진구",
+          "shortName": "광진구",
+          "code": ""
+        },
+        {
+          "types": ["DONGMYUN"],
+          "longName": "구의동",
+          "shortName": "구의동",
+          "code": ""
+        },
+        { "types": ["RI"], "longName": "", "shortName": "", "code": "" },
+        {
+          "types": ["ROAD_NAME"],
+          "longName": "자양로",
+          "shortName": "자양로",
+          "code": ""
+        },
+        {
+          "types": ["BUILDING_NUMBER"],
+          "longName": "104",
+          "shortName": "104",
+          "code": ""
+        },
+        {
+          "types": ["BUILDING_NAME"],
+          "longName": "",
+          "shortName": "",
+          "code": ""
+        },
+        {
+          "types": ["LAND_NUMBER"],
+          "longName": "246-17",
+          "shortName": "246-17",
+          "code": ""
+        },
+        {
+          "types": ["POSTAL_CODE"],
+          "longName": "05044",
+          "shortName": "05044",
+          "code": ""
+        }
+      ],
+      "x": "127.0837732",
+      "y": "37.5370348",
+      "distance": 0.0
+    }
+  ],
+  "errorMessage": ""
+}

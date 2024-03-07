@@ -16,7 +16,7 @@ api_key = os.getenv("KEY")
 # tmp3 = pd.read_csv('./csv/mrgd/mrgd_multi23.csv',low_memory=False)
 fom = pd.read_csv("./csv/mrgd/fom.csv", low_memory=False)
 addresses = fom["address"].unique()  # ["개포로109길 5","언주로 103","언주로 3"]
-addresses = addresses[2872:]
+addresses = addresses[33178:]
 url = "https://naveropenapi.apigw.ntruss.com/map-geocode/v2/geocode"
 headers = {
     "X-NCP-APIGW-API-KEY-ID": api_id,

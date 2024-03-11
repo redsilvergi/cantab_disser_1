@@ -4,6 +4,7 @@ import csv
 import os
 from dotenv import load_dotenv
 import pandas as pd
+import numpy as np
 import time
 
 load_dotenv()
@@ -14,16 +15,19 @@ api_key = os.getenv("KEY")
 # tmp1 = pd.read_csv('./csv/mrgd/mrgd_flat23.csv',low_memory=False)
 # tmp2 = pd.read_csv('./csv/mrgd/mrgd_officetel23.csv',low_memory=False)
 # tmp3 = pd.read_csv('./csv/mrgd/mrgd_multi23.csv',low_memory=False)
-fom = pd.read_csv("./csv/mrgd/fom.csv", low_memory=False)
-addresses = fom["address"].unique()  # ["개포로109길 5","언주로 103","언주로 3"]
-addresses = addresses[33178:]
+# mrgd = pd.read_csv("./csv/mrgd/mrgd.csv", low_memory=False)
+# addresses = mrgd["address"].unique()  # ["개포로109길 5","언주로 103","언주로 3"]
+
+addresses = np.load('./csv/mrgd/addresses.npy')
+# addresses = addresses[33178:]
 url = "https://naveropenapi.apigw.ntruss.com/map-geocode/v2/geocode"
 headers = {
     "X-NCP-APIGW-API-KEY-ID": api_id,
     "X-NCP-APIGW-API-KEY": api_key,
 }
+# print(addresses)
 
-cord_file_path = os.path.join(os.getcwd(), "cord.csv")
+cord_file_path = os.path.join(os.getcwd(), "./res_tmp/cord.csv")
 with open(cord_file_path, "w", encoding="utf-8", newline="") as file:
     writer = csv.writer(file)
     writer.writerow(["address", "lon", "lat"])
